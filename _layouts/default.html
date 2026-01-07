@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="refresh" content="0; url=https://jonez.it" />
-  <title>Redirecting...</title>
-</head>
-<body>
-  <p>Redirigiendo a <a href="https://jonez.it">jonez.it</a>...</p>
-</body>
-</html>
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+
+    {% include scripts.html %}
+
+  </body>
