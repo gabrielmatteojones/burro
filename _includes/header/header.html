@@ -1,22 +1,23 @@
 <style>
 
 
-
-
-
-
-
-
 .it-header-navbar-wrapper {
-  background: transparent !important; /* rende trasparente il background della navbar */
+  background: transparent !important; /* niente sfondo */
+  margin-bottom: 0; /* rimuove eventuali spazi */
 }
 
 .navbar,
 .navbar .menu-wrapper {
-  background: transparent !important; /* assicura che anche i div interni siano trasparenti */
+  background: transparent !important; /* anche i div interni trasparenti */
 }
 
-
+/* se vuoi un leggerissimo “effetto stacco” sopra l’immagine */
+.it-header-navbar-wrapper::after {
+  content: "";
+  display: block;
+  height: 2px; /* spessore piccolo */
+  background: rgba(0,0,0,0.1); /* leggero bordo trasparente per far risaltare la navbar */
+}
 
   
 </style>
