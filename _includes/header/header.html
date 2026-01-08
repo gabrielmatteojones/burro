@@ -1,24 +1,34 @@
 <style>
 
 
+
+
+
+  /* Navbar */
 .it-header-navbar-wrapper {
-  background: transparent !important; /* niente sfondo */
-  margin-bottom: 0; /* rimuove eventuali spazi */
+  background: #fff; /* o quello che vuoi, può anche restare trasparente se vuoi */
+  margin-bottom: 0; /* nessuno spazio sotto */
+  padding-bottom: 0; 
 }
 
-.navbar,
-.navbar .menu-wrapper {
-  background: transparent !important; /* anche i div interni trasparenti */
+/* Section immagine */
+.it-hero-wrapper {
+  margin-top: 0; /* elimina spazio sopra */
+  padding-top: 0;
 }
 
-/* se vuoi un leggerissimo “effetto stacco” sopra l’immagine */
-.it-header-navbar-wrapper::after {
-  content: "";
-  display: block;
-  height: 2px; /* spessore piccolo */
-  background: rgba(0,0,0,0.1); /* leggero bordo trasparente per far risaltare la navbar */
+.img-wrapper img {
+  display: block; /* evita spazio extra sotto l’immagine */
+  width: 100%; /* occupa tutta la larghezza */
+  height: auto;
 }
 
+
+
+
+
+
+  
   
 </style>
 
