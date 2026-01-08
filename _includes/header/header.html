@@ -1,16 +1,24 @@
-<style>.it-header-navbar-wrapper {
-  position: absolute; /* lo fa galleggiare sopra il contenuto sottostante */
-  top: 0; /* posizione in cima alla pagina */
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.3); /* sfondo trasparente, leggermente bianco, puoi cambiare colore o trasparenza */
-  backdrop-filter: blur(5px); /* effetto sfocatura dello sfondo sotto la navbar (opzionale, molto elegante) */
-  z-index: 10; /* si assicura che sia sopra all'immagine sottostante */
+<style>
+
+
+
+
+
+
+
+
+.it-header-navbar-wrapper {
+  background: transparent !important; /* rende trasparente il background della navbar */
 }
 
-.navbar {
-  padding: 0.5rem 1rem; /* riduci un po’ padding se vuoi che sia sottile */
+.navbar,
+.navbar .menu-wrapper {
+  background: transparent !important; /* assicura che anche i div interni siano trasparenti */
 }
+
+
+
+  
 </style>
 
 <div class="it-header-slim-wrapper">
