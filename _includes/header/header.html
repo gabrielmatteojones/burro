@@ -2,30 +2,31 @@
 
 
 
-
-
-  /* Navbar */
+/* Navbar */
 .it-header-navbar-wrapper {
-  background: #fff; /* o quello che vuoi, può anche restare trasparente se vuoi */
+  background: transparent; /* navbar trasparente */
   margin-bottom: 0; /* nessuno spazio sotto */
-  padding-bottom: 0; 
+  padding-bottom: 0;
+  position: absolute; /* fa sì che stia sopra l'immagine */
+  width: 100%;
+  z-index: 10; /* sopra l'immagine */
 }
 
 /* Section immagine */
 .it-hero-wrapper {
   margin-top: 0; /* elimina spazio sopra */
   padding-top: 0;
+  position: relative; /* necessario per lo z-index dell'immagine */
 }
 
+/* Immagine */
 .img-wrapper img {
   display: block; /* evita spazio extra sotto l’immagine */
   width: 100%; /* occupa tutta la larghezza */
   height: auto;
+  position: relative; /* rimane dietro la navbar */
+  z-index: 1; /* dietro la navbar */
 }
-
-
-
-
 
 
   
