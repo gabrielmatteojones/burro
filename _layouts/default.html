@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
-  <title>Titolo della pagina</title>
-  <meta name="description" content="{{ site.intro | default: Benvenuti nell'OPAC della Corte Letteraria di Gabriel Jones }}">
+  <title>{{ page.title }} {{ site.title }}</title>
+  <meta name="description" content="{{ page.intro | default: Benvenuti nell'OPAC della Corte Letteraria di Gabriel Jones }}">
   <meta name="author" content="Gabriel Jones">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph (Facebook, LinkedIn, ecc.) -->
   <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.intro | default: Benvenuti nell'OPAC della Corte Letteraria di Gabriel Jones }}">
+  <meta property="og:description" content="{{ page.intro | default: Benvenuti nell'OPAC della Corte Letteraria di Gabriel Jones }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:image" content="https://maremosso.lafeltrinelli.it/media/2gyks4q5/template_banner.jpg?anchor=center&mode=crop&width=450&height=321&rnd=133580058645330000">
