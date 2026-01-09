@@ -21,6 +21,7 @@ collections:
         fields:
           - { label: "Nome", name: "name", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
+  
   - name: "page" # Nome della collection, che corrisponde ai post
     label: "Post"
     folder: "it" # La cartella dove sono i post in Jekyll
@@ -30,17 +31,18 @@ collections:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", default: "now" } # Data automatica
       - { label: "Contenuto", name: "body", widget: "markdown" }
+
   - name: "book" # Nome della collection, che corrisponde ai post
-    label: "book"
+    label: "Book"
     folder: "_libri" # La cartella dove sono i post in Jekyll
     create: true # Permette di creare nuovi post
     slug: "{{title}}" # Struttura del nome dei file
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "esempio intro", name: "intro", widget: "string" }
-      - { label: "author", name: "author", widget: "string" }
-      - { label: "year", name: year", widget: "string" }
-      - { label: "genere", name: "genere", widget: "string" }
-      - { label: "n", name: "n", widget: "string" }
-      - { label: "stato", name: "stato", widget: "string" }
+      - { label: "Esempio intro", name: "intro", widget: "string" }
+      - { label: "Autore", name: "author", widget: "string" }
+      - { label: "Anno", name: "year", widget: "string" }
+      - { label: "Genere", name: "genere", widget: "string" }
+      - { label: "Numero", name: "n", widget: "string" }
+      - { label: "Stato", name: "stato", widget: "string" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "book" }
