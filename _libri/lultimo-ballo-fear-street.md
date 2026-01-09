@@ -9,6 +9,6 @@ author: Stine, Robert L.
 year": "2025"
 genere: giallo
 n: "-2"
-stato: BiblioPordenone
+stato: BibliotecaPordenone
 layout: book
 ---
