@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: 48891 # La tua branch principale, solitamente 'main' o 'master'
+  branch: "48891" # La tua branch principale, solitamente 'main' o 'master'
 
 media_folder: "assets/uploads" # Dove saranno caricate le immagini
 public_folder: "/assets/uploads" # Path pubblico per le immagini
