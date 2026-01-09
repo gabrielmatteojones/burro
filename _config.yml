@@ -57,4 +57,4 @@ exclude:
 collections:
   libri:
     output: true
-    permalink: /OPAC/libri/:name/
+    permalink: /OPAC/:name/

@@ -77,17 +77,7 @@ layout: default
 
     
                                                     </div>
-                        <div class="col-cover">
-                                    <div class="cover">
-                                        <a href="https://www.google.com/search?q={{ page.title }}" target="_blank" title="">
-                                            <img loading="lazy" class="img-fluid" src="{{ page.img }}">
-                                        </a>
 
-                                            <div class="img-source">
-                                                <a href="https://books.google.com/books?vid=ISBN9788806254230" target="_blank" title="Clicca qui per visualizzare la fonte">Fonte: GOOGLE</a>
-                                            </div>
-                                    </div>
-                        </div>
                         <div class="clear"></div>
 
                     </div>
@@ -280,14 +270,14 @@ Titolo Completo                                </td>
                             </div>
                         <div class="btn-group">
                             <div class="btn-group">
-                                <a class="btn btn-sm btn-primary" href="https://www.google.it/search?q=%22De+Giovanni%2C+Maurizio%22" target="_blank">
+                                <a class="btn btn-sm btn-primary" href="https://www.google.it/search?q={{ page.title }}{{ page.author }}" target="_blank">
                                     Google
                                 </a>
                             </div>
                         </div>
                         <div class="btn-group">
                             <div class="btn-group">
-                                <a class="btn btn-sm btn-primary" href="https://it.wikipedia.org/w/index.php?search=De+Giovanni+Maurizio" target="_blank">
+                                <a class="btn btn-sm btn-primary" href="https://it.wikipedia.org/w/index.php?search={{ page.title }}{{ page.author }}" target="_blank">
                                     Wikipedia
                                 </a>
                             </div>
@@ -363,12 +353,12 @@ Titolo Completo                                </td>
 
 
 
-                        <td class="td-vol td-collocation " data-title="Collocazione">Corte Letteraria di Gabriel Jones</td>
+                        <td class="td-vol td-collocation " data-title="Collocazione">OPAC di Gabriel Jones</td>
                                                                 <td class="td-vol td-status " data-title="Prestabilità">{{ page.author }}</td>
 
 
                         <td class="td-vol td-circulation " data-title="Stato">
-                            A scaffale
+                            {{ page.stato }}
                         </td>
 
                         <td class="td-vol td-reserve-count  " data-title="Prenotazioni">

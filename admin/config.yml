@@ -2,28 +2,25 @@ backend:
   name: git-gateway
   branch: dependabot/bundler/addressable-2.8.1 # La tua branch principale, solitamente 'main' o 'master'
 
-media_folder: "assets" # Dove saranno caricate le immagini
-public_folder: "/assets" # Path pubblico per le immagini
+media_folder: "assets/uploads" # Dove saranno caricate le immagini
+public_folder: "/assets/uploads" # Path pubblico per le immagini
 
 collections:
-  - name: "posts" # Nome della collection, che corrisponde ai post
-    label: "Post"
-    folder: "_posts" # La cartella dove sono i post in Jekyll
-    create: true # Permette di creare nuovi post
-    slug: "{{year}}-{{day}}-{{month}}-{{slug}}" # Struttura del nome dei file
+  - name: "vp"
+    label: "VP Pages"
+    folder: "links"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime", default: "now" } # Data automatica
-      - { label: "Contenuto", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Categorie", name: "categories", widget: "list" }
-      - { label: "Descrizione", name: "description", widget: "string" }
-      - { label: "Parole Chiave", name: "keywords", widget: "string" }
-      - { label: "Immagine", name: "image", widget: "image" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "cartella" }
       - { label: "Permalink", name: "permalink", widget: "string" }
-      - { label: "Riferimento", name: "ref", widget: "string", default: "new" } # Riferimento automatico
-      - { label: "Autore", name: "author", widget: "hidden", default: "Redazione GMJ" } # Autore nascosto
-      - { label: "Lingua", name: "lang", widget: "hidden", default: "it" }
+      - label: "Link"
+        name: "links"
+        widget: "list"
+        fields:
+          - { label: "Nome", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
   - name: "page" # Nome della collection, che corrisponde ai post
     label: "Post"
     folder: "it" # La cartella dove sono i post in Jekyll
@@ -33,3 +30,17 @@ collections:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime", default: "now" } # Data automatica
       - { label: "Contenuto", name: "body", widget: "markdown" }
+  - name: "book" # Nome della collection, che corrisponde ai post
+    label: "book"
+    folder: "_libri" # La cartella dove sono i post in Jekyll
+    create: true # Permette di creare nuovi post
+    slug: "{{title}}" # Struttura del nome dei file
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "esempio intro", name: "intro", widget: "string" }
+      - { label: "author", name: "author", widget: "string" }
+      - { label: "year", name: year", widget: "string" }
+      - { label: "genere", name: "genere", widget: "string" }
+      - { label: "n", name: "n", widget: "string" }
+      - { label: "stato", name: "stato", widget: "string" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "book" }
